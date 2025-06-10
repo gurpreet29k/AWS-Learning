@@ -55,9 +55,9 @@
 # Downloaded key: my-key.pem
 
 ### Step 2: Set File Permission
+
 ![image](https://github.com/user-attachments/assets/4b17d9de-fe71-4210-b42f-2ca4ba15c6f4)
 
-# chmod 400 my-key.pem
 
 ### Step 3: Launch EC2 Instance
 
@@ -68,7 +68,8 @@
 
 ### Step 4: Connect via SSH
 
-# ssh -i my-key.pem ec2-user@<your-ec2-public-ip>
+![image](https://github.com/user-attachments/assets/2b9bf86a-17c1-4d92-82ab-790669c39c6d)
+
 
 🧠 Interview Notes
       chmod 400: Makes .pem file readable only by owner – required for secure SSH.
