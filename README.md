@@ -55,6 +55,7 @@
 # Downloaded key: my-key.pem
 
 ### Step 2: Set File Permission
+![image](https://github.com/user-attachments/assets/4b17d9de-fe71-4210-b42f-2ca4ba15c6f4)
 
 # chmod 400 my-key.pem
 
