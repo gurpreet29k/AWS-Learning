@@ -1,0 +1,43 @@
+# Apache Web Server on AWS EC2 with User Data and IAM Role
+
+## Project Overview
+
+This project demonstrates how to automatically launch and configure an Apache web server on an AWS EC2 instance using a **User Data script** during instance initialization. 
+The EC2 instance is assigned an **IAM Role** to securely manage AWS permissions without embedding credentials.
+
+---
+
+## Project Components
+
+- **EC2 Instance**: Amazon Linux 2 instance running Apache HTTP Server.
+- **User Data Script**: Bash script executed on instance launch to install and start Apache server.
+- **IAM Role**: Attached to the EC2 instance for AWS permission management (optional for this basic setup).
+- **Apache Web Server**: Hosts a simple web page accessible via the instance’s public IP.
+
+---
+
+## How It Works
+
+1. When the EC2 instance boots, the **User Data script** runs automatically.
+2. The script updates the package repository, installs Apache HTTP Server (`httpd`), and starts the Apache service.
+3. The server hosts a basic HTML page (default Apache welcome page or customized).
+4. The IAM role attached to the instance allows secure AWS API access if needed for extended functionality.
+
+---
+
+## Files in This Repository
+
+- `setup-apache.sh` — User Data Bash script to configure Apache server on EC2.
+- `README.md` — This documentation file.
+
+---
+
+## How to Launch the EC2 Instance
+
+1. Create or use an existing IAM role with necessary permissions (optional).
+                                                                            
+2. Launch a new EC2 instance (Amazon Linux 2 recommended).
+3. In the **Advanced Details** section of the launch wizard, paste the contents of `setup-apache.sh` into the **User data** field.
+4. Attach the IAM role to the instance.
+5. Complete the instance launch.
+6. Once the instance is running, access the Apache server via the instance’s **Public IPv4 address** in a browser:  
